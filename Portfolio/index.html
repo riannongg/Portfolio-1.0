@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio_style.css">
+</head>
+
+<body>
+<!---------- Header ---------->
+<div id="header">
+        <a class="name">R T O</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</div>
+
+<!---------- Home ---------->
+<div id="home">
+    <div class="container">
+        <h1>I'm Ryan T. Ong<br>from UCI</h1>
+        <h2>Computer Engineer</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis corporis doloribus porro! Officiis ea explicabo aliquid libero ratione unde corrupti, ut suscipit nihil aspernatur quam dolores sed totam? Eligendi, iste!</p>    
+    </div>
+</div>
+
+<!---------- About ---------->
+<div id="about">
+    <div class="aboutinfo">
+        <div class="rows">
+            <div class="aboutc1">
+
+            </div>
+            <div class="aboutc2">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolor, praesentium, in vitae quod quas sapiente vel voluptatibus maxime aliquid modi quis similique ullam eligendi reiciendis magni nihil sint nobis.</p>
+                
+                <div class="abouttitles">
+                    <h2 class="tablinks activelink" onclick="opentab('skills')">Skills</h2>
+
+                    <h2 class="tablinks" onclick="opentab('experience')">Experience</h2>
+
+                    <h2 class="tablinks" onclick="opentab('education')">Education</h2>
+                </div>
+                <div class="tabcontents activetab" id="skills">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, rerum. Eius doloribus molestias, facilis quo cupiditate error. Consequatur asperiores modi molestias ducimus, perspiciatis facilis in corporis nostrum enim. Vero, cum?</li>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="experience">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. At in blanditiis temporibus quis dolore reprehenderit. Quod, magnam! Quam, officia labore. Exercitationem ab omnis repellendus quo consequatur! Architecto, doloribus dolorem? Ex.</li>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="education">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos iure alias libero, dolore expedita ex veritatis, illum inventore voluptatibus est nisi nostrum delectus quia! Magni, eos laudantium. Molestiae, aliquid autem?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------- Contact ---------->
+<div id="contact">
+    <div class="container">
+        <div class="rows">
+            <div class="contactleft">
+                <h2>Contact Me</h1>
+                <p>firstlast@gmail.com</p>
+                <p>(123)456-7890</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tablinks");
+    var tabcontents = document.getElementsByClassName("tabcontents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("activelink");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("activetab");
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("activetab")
+    }
+
+</script>
+
+</body>
+
+</html>
